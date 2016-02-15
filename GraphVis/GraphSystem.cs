@@ -615,7 +615,7 @@ namespace GraphVis {
 			parameters.highEdgeColor = HighlightEdgeColor;
 
 			device.ResetStates();
-			device.ClearBackbuffer( Color.White );
+			device.ClearBackbuffer( Color.Black );
 			device.SetTargets( device.BackbufferDepth, device.BackbufferColor );
 			paramsCB.SetData(parameters);
 

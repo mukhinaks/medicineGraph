@@ -32,7 +32,7 @@ namespace GraphVis
 						string[] parts;
 						parts = line.Split(new Char[] { '\t', ',' });
 						int index1 = int.Parse(parts[0]);
-						string text = parts[2];
+						string text = parts[4];
 						int colorID = int.Parse(parts[3]);
 
 						if (!nodeId_NodeNumber.ContainsKey(index1))

@@ -376,8 +376,8 @@ namespace GraphVis
     
     
 
-			var color = Color.Black;
-			if (selectedNodeIndex == node.Id) color = node.GetColor();
+			var color = Color.White;
+			//if (selectedNodeIndex == node.Id) color = node.GetColor();
 
 			string[] lines;
 			var rec = CalculateStringSize(name, currentFont, out lines);
@@ -396,7 +396,7 @@ namespace GraphVis
 			 var lineRec = currentFont.MeasureString(line);
 
 			// currentFont.DrawString(sb, line, -lineRec.Width, -rec.Height, color);
-			 currentFont.DrawString(sb, line, -(lineRec.Width / 2), (-rec.Height / 2) + (lineInd-1) * currentFont.LineHeight - node.GetSize(), color);
+			 currentFont.DrawString(sb, line, -(lineRec.Width / 2), (-rec.Height / 2) + (lineInd-1) * currentFont.LineHeight - node.GetSize() * 1.5f, color);
 			}
 		   }
 		   sb.End();
