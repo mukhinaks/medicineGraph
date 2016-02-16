@@ -13,7 +13,7 @@ namespace GraphVis
 {
 	public class BaseNode : INode
 	{
-		float nodeSize;
+		public float nodeSize;
 		Color nodeColor;
 
 		public BaseNode( float size, Color color )

@@ -41,6 +41,7 @@ struct Link {
 	uint par1;
 	uint par2;
 	float length;
+	float strength;
 };
 
 SamplerState					Sampler				: 	register(s0);
@@ -170,6 +171,7 @@ void GSMain( point VSOutput inputLine[1], inout LineStream<GSOutput> outputStrea
 	p2.TexCoord		=	float2(0, 0);
 
 	float c			=	Params.edgeOpacity;
+	c = lk.strength * 1.5f;
 	p1.Color		=	float4(c,c,c,0);
 	p2.Color		=	float4(c,c,c,0);
 

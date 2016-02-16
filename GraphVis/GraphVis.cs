@@ -33,6 +33,7 @@ namespace GraphVis
 		{
 			//	enable object tracking :
 			Parameters.TrackObjects = true;
+			Parameters.MsaaLevel = 8;
 
 			//	uncomment to enable debug graphics device:
 			//	(MS Platform SDK must be installed)
@@ -255,6 +256,7 @@ namespace GraphVis
 	//			stNet.ReadFromFile("../../../../p2p_networks/p2p-Gnutella25.txt");
 
 
+				//stNet.ReadFromFile("../../../../medicine/edgeList.txt");
 				stNet.ReadFromFile("../../../../medicine/edge.txt");
 				//stNet.ReadFromFile("D:/Graphs/collab_networks/CA-GrQc.txt");
 	//			stNet.ReadFromFile("../../../../collab_networks/CA-HepTh.txt");
@@ -298,14 +300,14 @@ namespace GraphVis
 
 			}
 
-			ds.Add(Color.Orange, "FPS {0}", gameTime.Fps);
-			ds.Add(Color.Orange, "F1   - show developer console");
-			ds.Add(Color.Orange, "F5   - build content and reload textures");
-			ds.Add(Color.Orange, "F12  - make screenshot");
-			ds.Add(Color.Orange, "ESC  - exit");
-			ds.Add(Color.Orange, "Press Z or X to load graph");
-			ds.Add(Color.Orange, "Press M to load painted graph (SLOW!)");
-			ds.Add(Color.Orange, "Press P to pause/unpause");
+			//ds.Add(Color.Orange, "FPS {0}", gameTime.Fps);
+			//ds.Add(Color.Orange, "F1   - show developer console");
+			//ds.Add(Color.Orange, "F5   - build content and reload textures");
+			//ds.Add(Color.Orange, "F12  - make screenshot");
+			//ds.Add(Color.Orange, "ESC  - exit");
+			//ds.Add(Color.Orange, "Press Z or X to load graph");
+			//ds.Add(Color.Orange, "Press M to load painted graph (SLOW!)");
+			//ds.Add(Color.Orange, "Press P to pause/unpause");
 //			ds.Add(Color.Orange, "Press I to switch to manual mode");
 
 			base.Update(gameTime);
@@ -342,7 +344,7 @@ namespace GraphVis
 			}
 			else
 			{
-				ds.Add(Color.Orange, "No selection");
+				//ds.Add(Color.Orange, "No selection");
 				pSys.Deselect();
 			}
 			DrawNames();
@@ -417,8 +419,8 @@ namespace GraphVis
 
 			   float height = (lines.Length-2)*font.LineHeight + font.CapHeight;
 
-			   rec.Width = (int)width;
-			   rec.Height = (int)height;
+			   rec.Width = (int)width ;
+			   rec.Height = (int)height ;
 
 			   return rec;
 		  }

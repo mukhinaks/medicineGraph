@@ -90,7 +90,7 @@ float4 springForce( float4 pos, float4 otherPos ) // 4th component in otherPos i
 	float deltaR		= Rabs - otherPos.w;
 	float absForce		= pos.w * ( deltaR ) / ( Rabs );
 	float energy		= 0.5f * pos.w * deltaR * deltaR;
-	return float4( mul( absForce, R ), energy ) * 0.25f;  // we write energy into the 4th component
+	return float4( mul( absForce, R ), energy ) * 0.05f;  // we write energy into the 4th component
 }
 
 
@@ -170,7 +170,7 @@ float4 calcLinksForce( float4 pos, uint id, uint linkListStart, uint linkCount )
 		}
 		otherP = particleRWBuffer[otherId];
 		float4 otherPos = float4( otherP.Position, link.length );
-		pos.w = link.strength;
+		pos.w = 1.0f;//link.strength;
 		force += springForce( pos, otherPos );
 	}
 	return force;

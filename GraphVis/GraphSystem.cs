@@ -599,9 +599,9 @@ namespace GraphVis {
 			
 			// Debug output: ------------------------------------------------------------
 			var debStr = Game.GetService<DebugStrings>();
-			debStr.Add( Color.Yellow, "drawing " + nodeList.Count + " points" );
-			debStr.Add( Color.Yellow, "drawing " + edgeList.Count + " lines" );
-			debStr.Add( Color.Black, lay.UseGPU ? "Using GPU" : "Not using GPU" );
+			//debStr.Add( Color.Yellow, "drawing " + nodeList.Count + " points" );
+			//debStr.Add( Color.Yellow, "drawing " + edgeList.Count + " lines" );
+			//debStr.Add( Color.Black, lay.UseGPU ? "Using GPU" : "Not using GPU" );
 			base.Draw( gameTime, stereoEye );
 		}
 
